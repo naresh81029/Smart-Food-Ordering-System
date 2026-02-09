@@ -1,0 +1,105 @@
+.admin-dashboard {
+  padding-bottom: 40px;
+  background: #f5f7fb;
+}
+
+/* VIDEO HEADER */
+.admin-video {
+  position: relative;
+  height: 35vh;
+  overflow: hidden;
+}
+
+.admin-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.admin-video-overlay h1 {
+  font-size: 36px;
+}
+
+.admin-video-overlay p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* STATS */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card .icon {
+  font-size: 40px;
+}
+
+.stat-card h3 {
+  margin: 10px 0;
+}
+
+.stat-card p {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2575fc;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+}
+
+/* INFO */
+.admin-info {
+  text-align: center;
+  padding: 30px;
+}
+
+/* ANIMATIONS */
+.animate-fade {
+  animation: fadeIn 1s ease;
+}
+
+.animate-up {
+  animation: slideUp 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

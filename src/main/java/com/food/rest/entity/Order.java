@@ -1,5 +1,7 @@
 package com.food.rest.entity;
 
+
+
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import lombok.Data;
@@ -17,9 +19,14 @@ public class Order {
     private int foodId;
     private String foodName;
     private double price;
+    private int quantity;
     private String status;
 
-    // ✅ ADD THESE
+    @Column(name = "total_amount", nullable = false)
+    private double totalAmount;
+
     private LocalDateTime bookedAt;
     private LocalDateTime cancelledAt;
 }
+
+
